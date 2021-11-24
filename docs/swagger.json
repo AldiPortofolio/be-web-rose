@@ -1,0 +1,4753 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "contact": {}
+    },
+    "paths": {
+        "/rosego/v.0.1/UploadImage": {
+            "post": {
+                "description": "Upload Image",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "UploadImage",
+                "operationId": "Upload Image",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/minio.UploadRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/acquititions": {
+            "post": {
+                "description": "Acquititons Save",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "Acquititons - Save",
+                "operationId": "Acquititons - Save",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dto.ReqAcquititionsDto"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/models.Response"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "contents": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/definitions/dto.ResAcquititionsDto"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/acquititions/delete/{id}": {
+            "delete": {
+                "description": "Acquititons Delete",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "Acquititons - Delete",
+                "operationId": "Acquititons - Delete",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "integer",
+                        "description": "ID of the order to be deleted",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/acquititions/filter": {
+            "post": {
+                "description": "Acquititons Filter",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "Acquititons - Filter",
+                "operationId": "Acquititons - Filter",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dto.ReqFilterAcquititionsDto"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/models.Response"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "contents": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/definitions/dto.ReqAcquititionsDto"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/akuisisi-sfa-failed/filter": {
+            "post": {
+                "description": "Akuisisi SFA Failed Filter",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "Akuisisi SFA Failed- Filter",
+                "operationId": "Akuisisi SFA Failed - Filter",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dto.ReqAkuisisiSfaFailed"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/models.Response"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "contents": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/definitions/dbmodels.AkuisisiSfaFailed"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/akuisisi-sfa/filter": {
+            "post": {
+                "description": "Akuisisi SFA Filter",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "Akuisisi SFA - Filter",
+                "operationId": "Akuisisi SFA - Filter",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dto.ReqAkuisisiSfa"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/models.Response"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "contents": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/definitions/dbmodels.AkuisisiSfa"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/bank-list": {
+            "post": {
+                "description": "SettlementConfigController Save/EDit",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "SettlementConfigController - Save / Edit",
+                "operationId": "SettlementConfigController - Save/Edit",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dto.ReqSettlementConfigDto"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/bank-list/filter": {
+            "post": {
+                "description": "Settlement Config Filter Paging",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "SettlementConfig - Filter",
+                "operationId": "SettlementConfig - Filter",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dto.ReqSettlementConfigDto"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/models.Response"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "contents": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/definitions/dbmodels.SettlementConfig"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/blast-notif/send-all": {
+            "post": {
+                "description": "BlastNotif Send All",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "BlastNotif Send All",
+                "operationId": "BlastNotifSendAll",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dto.ReqBlastNotificationSendAllDto"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/config-va-merchant-group/find-by-group-id-from-redis/{id}": {
+            "get": {
+                "description": "Config VA Merchant Group - FindByGroupIdFromRedis",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "Config VA Merchant Group - FindByGroupIdFromRedis",
+                "operationId": "Config VA Merchant Group - FindByGroupIdFromRedis",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "merchant group id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/config-va-merchant-group/find-by-group-id/{id}": {
+            "get": {
+                "description": "Config VA Merchant Group - FindByGroupId",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "Config VA Merchant Group - FindByGroupId",
+                "operationId": "Config VA Merchant Group - FindByGroupId",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "merchant group id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/config-va-merchant-group/save": {
+            "post": {
+                "description": "Config VA Merchant Group - Save",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "Config VA Merchant Group - Save",
+                "operationId": "Config VA Merchant Group - Save",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dbmodels.ConfigVaMerchantGroup"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/config-va-merchant-group/save-to-redis": {
+            "post": {
+                "description": "Config VA Merchant Group - SaveToRedis",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "Config VA Merchant Group - SaveToRedis",
+                "operationId": "Config VA Merchant Group - SaveToRedis",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dbmodels.ConfigVaMerchantGroup"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/feature-product": {
+            "post": {
+                "description": "Feature Product Save/EDit",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "Feature Product - Save / Edit",
+                "operationId": "Feature Product - Save/Edit",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dto.ReqFiturProductDto"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/feature-product/filter": {
+            "post": {
+                "description": "Feature Product Filter",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "Feature Product - Filter",
+                "operationId": "Feature Product - Filter",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dto.ReqFiturProductDto"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/models.Response"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "contents": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/definitions/dto.ReqFiturProductDto"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/instruction-list": {
+            "post": {
+                "description": "Instruction List Save",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "Instruction List - Save",
+                "operationId": "Instruction List - Save",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dto.ReqInstructionListDto"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/instruction-list/delete/{id}": {
+            "delete": {
+                "description": "Delete Instruction List",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "Instruction List - Delete",
+                "operationId": "Instruction List - Delete",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "integer",
+                        "description": "ID of the order to be deleted",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/instruction-list/filter": {
+            "post": {
+                "description": "Instruction List Filter",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "Instruction List - Filter",
+                "operationId": "Instruction List - Filter",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dto.ReqInstructionListDto"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/models.Response"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "contents": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/definitions/dto.ResInstructionListDto"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/limit-transaction": {
+            "post": {
+                "description": "Limit Transaction Save/EDit",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "Limit Transaction - Save / Edit",
+                "operationId": "Limit Transaction - Save/Edit",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dto.ReqLimitTransactionDto"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/limit-transaction/filter": {
+            "post": {
+                "description": "Limit Transaction Filter",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "Limit Transaction - Filter",
+                "operationId": "Limit Transaction - Filter",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dto.ReqLimitTransactionDto"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/models.Response"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "contents": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/definitions/dbmodels.LimitTransaction"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/lmonitoring-activation-fds/filter": {
+            "post": {
+                "description": "Monitoring Activation FDS Filter",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "Monitoring Activation FDS - Filter",
+                "operationId": "Monitoring Activation FDS - Filter",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dto.ReqMonitoringActivationFDSDto"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/models.Response"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "contents": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/definitions/dbmodels.LimitTransaction"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/loan-product-maintenance": {
+            "post": {
+                "description": "LoanProductMaintenance Save/EDit",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "LoanProductMaintenance - Save / Edit",
+                "operationId": "LoanProductMaintenanceSaveEdit",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dto.ReqSaveLoanProductMaintenanceDto"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/loan-product-maintenance/filter": {
+            "post": {
+                "description": "LoanProductMaintenance Filter Paging",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "LoanProductMaintenance - Filter",
+                "operationId": "LoanProductMaintenanceFilter",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dto.ReqLoanProductMaintenanceDto"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/models.Response"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "contents": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/definitions/dto.ResValidationCodeMasterTagDto"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/lookup": {
+            "post": {
+                "description": "Lookup Save/EDit",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "Lookup - Save / Edit",
+                "operationId": "LookupSave/Edit",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dto.ReqLookupDto"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/lookup-group": {
+            "post": {
+                "description": "LookupGroup Save/EDit",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "LookupGroup - Save / Edit",
+                "operationId": "LookupGroupSave/Edit",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dto.ReqLookupGroupDto"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/lookup-group/all": {
+            "get": {
+                "description": "LookupGroup All",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "LookupGroup - All",
+                "operationId": "LookupGroupAll",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/models.Response"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "contents": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/definitions/dbmodels.LookupGroup"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/lookup-group/filter": {
+            "post": {
+                "description": "LookupGroup Filter Paging",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "LookupGroup - Filter",
+                "operationId": "LookupGroupFilter",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dto.ReqLookupGroupDto"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/models.Response"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "contents": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/definitions/dbmodels.LookupGroup"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/lookup/filter": {
+            "post": {
+                "description": "Lookup Filter Paging",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "Lookup - Filter",
+                "operationId": "LookupFilter",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dto.ReqLookupDto"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/models.Response"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "contents": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/definitions/dbmodels.Lookup"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/master-tag": {
+            "post": {
+                "description": "MasterTag Save/EDit",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "MasterTag - Save / Edit",
+                "operationId": "MasterTag - Save/Edit",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dto.ReqMasterTagDto"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/master-tag/all": {
+            "get": {
+                "description": "MasterTag AllData",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "MasterTag - All",
+                "operationId": "MasterTagAllData",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/models.Response"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "contents": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/definitions/dbmodels.MasterTag"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/master-tag/filter": {
+            "post": {
+                "description": "MasterTag Filter Paging",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "MasterTag - Filter",
+                "operationId": "MasterTagFilter",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dto.ReqMasterTagDto"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/models.Response"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "contents": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/definitions/dbmodels.MasterTag"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/merchant-bank-account": {
+            "post": {
+                "description": "MerchantBankAccount Save/EDit",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "MerchantBankAccount - Save / Edit",
+                "operationId": "MerchantBankAccount - Save/Edit",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dto.ReqMerchantBankAccountDto"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/merchant-bank-account/approval": {
+            "post": {
+                "description": "MerchantBankAccount filter approval",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "MerchantBankAccount - Get Data pending MerchantBankAccount",
+                "operationId": "MerchantBankAccount - filter approval",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dto.ReqMerchantBankAccountDto"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/models.Response"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "contents": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/definitions/dbmodels.MerchantBankAccount"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/merchant-bank-account/approval/approve": {
+            "post": {
+                "description": "MerchantBankAccount Approve",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "MerchantBankAccount - Approve",
+                "operationId": "MerchantBankAccount - Approve",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dto.ReqApprovalMerchantBankAccountDto"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/merchant-bank-account/approval/reject": {
+            "post": {
+                "description": "MerchantBankAccount Reject",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "MerchantBankAccount - Reject",
+                "operationId": "MerchantBankAccount - Reject",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dto.ReqApprovalMerchantBankAccountDto"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/merchant-bank-account/mid/{mid}": {
+            "get": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
+                "description": "Get MerchantBankAccount by mid",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "MerchantBankAccount - get by mid",
+                "operationId": "MerchantBankAccount - FindAllByMid",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "mid",
+                        "name": "mid",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/models.Response"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "contents": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/definitions/dbmodels.MerchantBankAccount"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/merchant-bank-loan/filter": {
+            "post": {
+                "description": "MerchantBankLoan Filter Paging",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "MerchantBankLoan - Filter",
+                "operationId": "MerchantBankLoanFilter",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dto.ReqMerchantBankLoanDto"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/models.Response"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "contents": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/definitions/dbmodels.MerchantBankLoan"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/merchant-bank-loan/find-sub": {
+            "post": {
+                "description": "MerchantBankLoan FindSubMerchantBankLoan",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "MerchantBankLoan - FindSubMerchantBankLoan",
+                "operationId": "MerchantBankLoanFindSubMerchantBankLoan",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dto.ReqSubMerchantBankloanDto"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/models.Response"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "contents": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/definitions/dbmodels.SubMerchantBankLoan"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/merchant-master-tag/download-all": {
+            "get": {
+                "description": "MerchantMasterTag DownloadAll",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "MerchantMasterTag - Download ALl",
+                "operationId": "MerchantMasterTagDownloadAll",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/merchant-master-tag/filter": {
+            "post": {
+                "description": "MerchantMasterTag Filter Paging",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "MerchantMasterTag - Filter",
+                "operationId": "MerchantMasterTagFilter",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dto.ReqMerchantMasterTagDto"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/models.Response"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "contents": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/definitions/dbmodels.MerchantMasterTag"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/partner-Link": {
+            "post": {
+                "description": "PartnerLinkController Save/EDit",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "PartnerLinkController - Save / Edit",
+                "operationId": "PartnerLinkController - Save/Edit",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dto.ReqPartnerLinkDto"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/partner-link/delete/": {
+            "post": {
+                "description": "PartnerLinkController Delete",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "PartnerLinkController - Delete",
+                "operationId": "PartnerLinkController - Delete",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dto.ReqPartnerLinkDto"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/partner-link/filter": {
+            "post": {
+                "description": "PartnerLink Filter Paging",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "PartnerLink - Filter",
+                "operationId": "PartnerLink - Filter",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dto.ReqPartnerLinkDto"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/models.Response"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "contents": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/definitions/dbmodels.PartnerLink"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/updated-data/approve": {
+            "post": {
+                "description": "UpdatedDataMerchant Approve",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "UpdatedDataMerchant - Approve",
+                "operationId": "UpdatedDataMerchantApprove",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dto.ReqUpdateDataMerchantDto"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/updated-data/filter": {
+            "post": {
+                "description": "UpdatedDataMerchant - Filter",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "UpdatedDataMerchant - Filter",
+                "operationId": "UpdatedDataMerchantFilter",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dto.ReqUpdatedDataMerchantDto"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/models.Response"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "contents": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/definitions/dbmodels.UpdatedDataMerchant"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/updated-data/reject": {
+            "post": {
+                "description": "UpdatedDataMerchant Reject",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "UpdatedDataMerchant - Reject",
+                "operationId": "UpdatedDataMerchantReject",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dto.ReqUpdateDataMerchantDto"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/upgrade-fds": {
+            "post": {
+                "description": "Upgrade FDS Save/EDit",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "Upgrade FDS - Save / Edit",
+                "operationId": "Upgrade FDS - Save/Edit",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dbmodels.LogUpgradeFds"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/upgrade-fds/filter": {
+            "post": {
+                "description": "Upgrade FDS Filter Paging",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "Upgrade FDS - Filter",
+                "operationId": "Upgrade FDS - Filter",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dto.ReqLogUpgradeFdsDto"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/models.Response"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "contents": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "array",
+                                                "items": {
+                                                    "$ref": "#/definitions/dbmodels.LogUpgradeFds"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/validation-code": {
+            "post": {
+                "description": "ValidationCode Save/EDit",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "ValidationCode - Save / Edit",
+                "operationId": "ValidationCode - Save/Edit",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dto.ReqValidationCodeDto"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/validation-code-master-tag": {
+            "post": {
+                "description": "ValidationCodeMasterTag Save/EDit",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "ValidationCodeMasterTag - Save / Edit",
+                "operationId": "ValidationCodeMasterTagSaveEdit",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dto.ReqSaveValidationCodeMasterTagDto"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/validation-code-master-tag/filter": {
+            "post": {
+                "description": "ValidationCodeMasterTag Filter Paging",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "ValidationCodeMasterTag - Filter",
+                "operationId": "ValidationCodeMasterTagFilter",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dto.ReqValidationCodeMasterTagDto"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/models.Response"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "contents": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/definitions/dto.ResValidationCodeMasterTagDto"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/rosego/v.0.1/validation-code/filter": {
+            "post": {
+                "description": "ValidationCode Filter Paging",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "ValidationCode - Filter",
+                "operationId": "ValidationCode - Filter",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dto.ReqValidationCodeDto"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/models.Response"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "contents": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/definitions/dto.ResValidationCodeDto"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "dbmodels.AkuisisiSfa": {
+            "type": "object",
+            "properties": {
+                "agent_company_id": {
+                    "type": "string"
+                },
+                "agent_id": {
+                    "type": "string"
+                },
+                "agent_name": {
+                    "type": "string"
+                },
+                "agent_phone_number": {
+                    "type": "string"
+                },
+                "category": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "device_brand": {
+                    "type": "string"
+                },
+                "device_group": {
+                    "type": "string"
+                },
+                "device_type": {
+                    "type": "string"
+                },
+                "existing_qr_value": {
+                    "type": "string"
+                },
+                "foto_preprinted": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "institution_id": {
+                    "type": "string"
+                },
+                "kategori_bisnis": {
+                    "type": "string"
+                },
+                "level": {
+                    "type": "string"
+                },
+                "merchant_group_name": {
+                    "type": "string"
+                },
+                "merchant_outlet_id": {
+                    "type": "string"
+                },
+                "merchant_pan": {
+                    "type": "string"
+                },
+                "metode_pembayaran": {
+                    "type": "string"
+                },
+                "nmid": {
+                    "type": "string"
+                },
+                "notes": {
+                    "type": "string"
+                },
+                "outlet_id": {
+                    "type": "string"
+                },
+                "owner_address": {
+                    "type": "string"
+                },
+                "owner_firstname": {
+                    "type": "string"
+                },
+                "owner_jenis_kelamin": {
+                    "type": "string"
+                },
+                "owner_kabupaten_kota": {
+                    "type": "string"
+                },
+                "owner_kecamatan": {
+                    "type": "string"
+                },
+                "owner_kelurahan": {
+                    "type": "string"
+                },
+                "owner_kode_pos": {
+                    "type": "string"
+                },
+                "owner_lastname": {
+                    "type": "string"
+                },
+                "owner_nama_gadis_ibu_kandung": {
+                    "type": "string"
+                },
+                "owner_no_id": {
+                    "type": "string"
+                },
+                "owner_no_telf": {
+                    "type": "string"
+                },
+                "owner_no_telf_lainnya": {
+                    "type": "string"
+                },
+                "owner_pekerjaan": {
+                    "type": "string"
+                },
+                "owner_provinsi": {
+                    "type": "string"
+                },
+                "owner_rt": {
+                    "type": "string"
+                },
+                "owner_rw": {
+                    "type": "string"
+                },
+                "owner_tanggal_lahir": {
+                    "type": "string"
+                },
+                "owner_tempat_lahir": {
+                    "type": "string"
+                },
+                "owner_tgl_expired_id": {
+                    "type": "string"
+                },
+                "owner_tipe_id": {
+                    "type": "string"
+                },
+                "owner_title": {
+                    "type": "string"
+                },
+                "pairVerifySimilarity": {
+                    "type": "string"
+                },
+                "partner_customer_id": {
+                    "type": "string"
+                },
+                "photo_ktp": {
+                    "type": "string"
+                },
+                "photo_location": {
+                    "type": "string"
+                },
+                "photo_location_2": {
+                    "type": "string"
+                },
+                "photo_location_left": {
+                    "type": "string"
+                },
+                "photo_location_right": {
+                    "type": "string"
+                },
+                "photo_selfie": {
+                    "type": "string"
+                },
+                "photo_sign": {
+                    "type": "string"
+                },
+                "priority_level": {
+                    "type": "string"
+                },
+                "srId": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "store_alamat": {
+                    "type": "string"
+                },
+                "store_jam_operasional": {
+                    "type": "string"
+                },
+                "store_jenis_lokasi_bisnis": {
+                    "type": "string"
+                },
+                "store_jenis_usaha": {
+                    "type": "string"
+                },
+                "store_kabupaten_kota": {
+                    "type": "string"
+                },
+                "store_kecamatan": {
+                    "type": "string"
+                },
+                "store_kelurahan": {
+                    "type": "string"
+                },
+                "store_latitude": {
+                    "type": "string"
+                },
+                "store_lokasi_bisnis": {
+                    "type": "string"
+                },
+                "store_longitude": {
+                    "type": "string"
+                },
+                "store_name": {
+                    "type": "string"
+                },
+                "store_name_preprinted": {
+                    "type": "string"
+                },
+                "store_phone_number": {
+                    "type": "string"
+                },
+                "store_postal_code": {
+                    "type": "string"
+                },
+                "store_provinsi": {
+                    "type": "string"
+                },
+                "terminal_phone_number": {
+                    "type": "string"
+                },
+                "terminal_provider": {
+                    "type": "string"
+                },
+                "updated_at": {
+                    "type": "string"
+                }
+            }
+        },
+        "dbmodels.AkuisisiSfaFailed": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "merchant_outlet_id": {
+                    "type": "string"
+                },
+                "merchant_pan": {
+                    "type": "string"
+                },
+                "request": {
+                    "type": "string"
+                },
+                "response": {
+                    "type": "string"
+                },
+                "store_name": {
+                    "type": "string"
+                },
+                "store_phone_number": {
+                    "type": "string"
+                },
+                "updated_at": {
+                    "type": "string"
+                }
+            }
+        },
+        "dbmodels.BankList": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "createdAt": {
+                    "type": "string"
+                },
+                "createdBy": {
+                    "type": "string"
+                },
+                "fullName": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "seq": {
+                    "type": "integer"
+                },
+                "shortName": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "updatedAt": {
+                    "type": "string"
+                },
+                "updatedBy": {
+                    "type": "string"
+                },
+                "urlImage": {
+                    "type": "string"
+                }
+            }
+        },
+        "dbmodels.ConfigVaMerchantGroup": {
+            "type": "object",
+            "properties": {
+                "VaTransactionType": {
+                    "type": "string"
+                },
+                "hostType": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "inquiryUrl": {
+                    "type": "string"
+                },
+                "merchantGroupId": {
+                    "type": "integer"
+                },
+                "paymentUrl": {
+                    "type": "string"
+                },
+                "vaAuthKey": {
+                    "type": "string"
+                },
+                "vaAuthType": {
+                    "type": "string"
+                },
+                "vaBca": {
+                    "type": "string"
+                },
+                "vaBcaCompanyCode": {
+                    "type": "string"
+                },
+                "vaBcaFeeTransactionAboveUpperLimitAmount": {
+                    "type": "integer"
+                },
+                "vaBcaFeeTransactionBelowLowerLimitAmount": {
+                    "type": "integer"
+                },
+                "vaBcaFeeTransactionInBetween": {
+                    "type": "integer"
+                },
+                "vaBcaLowerLimitAmount": {
+                    "type": "integer"
+                },
+                "vaBcaMerchantFeeAboveUpperLimitAmount": {
+                    "type": "integer"
+                },
+                "vaBcaMerchantFeeBelowLowerLimitAmount": {
+                    "type": "integer"
+                },
+                "vaBcaMerchantFeeInBetween": {
+                    "type": "integer"
+                },
+                "vaBcaSubCompanyCode": {
+                    "type": "string"
+                },
+                "vaBcaUpperLimitAmount": {
+                    "type": "integer"
+                },
+                "vaBri": {
+                    "type": "string"
+                },
+                "vaBriCompanyCode": {
+                    "type": "string"
+                },
+                "vaBriFeeTransactionAboveUpperLimitAmount": {
+                    "type": "integer"
+                },
+                "vaBriFeeTransactionBelowLowerLimitAmount": {
+                    "type": "integer"
+                },
+                "vaBriFeeTransactionInBetween": {
+                    "type": "integer"
+                },
+                "vaBriLowerLimitAmount": {
+                    "type": "integer"
+                },
+                "vaBriMerchantFeeAboveUpperLimitAmount": {
+                    "type": "integer"
+                },
+                "vaBriMerchantFeeBelowLowerLimitAmount": {
+                    "type": "integer"
+                },
+                "vaBriMerchantFeeInBetween": {
+                    "type": "integer"
+                },
+                "vaBriSubCompanyCode": {
+                    "type": "string"
+                },
+                "vaBriUpperLimitAmount": {
+                    "type": "integer"
+                },
+                "vaLain": {
+                    "type": "string"
+                },
+                "vaLainCompanyCode": {
+                    "type": "string"
+                },
+                "vaLainFeeTransactionAboveUpperLimitAmount": {
+                    "type": "integer"
+                },
+                "vaLainFeeTransactionBelowLowerLimitAmount": {
+                    "type": "integer"
+                },
+                "vaLainFeeTransactionInBetween": {
+                    "type": "integer"
+                },
+                "vaLainLowerLimitAmount": {
+                    "type": "integer"
+                },
+                "vaLainMerchantFeeAboveUpperLimitAmount": {
+                    "type": "integer"
+                },
+                "vaLainMerchantFeeBelowLowerLimitAmount": {
+                    "type": "integer"
+                },
+                "vaLainMerchantFeeInBetween": {
+                    "type": "integer"
+                },
+                "vaLainSubCompanyCode": {
+                    "type": "string"
+                },
+                "vaLainUpperLimitAmount": {
+                    "type": "integer"
+                },
+                "vaMandiri": {
+                    "type": "string"
+                },
+                "vaMandiriCompanyCode": {
+                    "type": "string"
+                },
+                "vaMandiriFeeTransactionAboveUpperLimitAmount": {
+                    "type": "integer"
+                },
+                "vaMandiriFeeTransactionBelowLowerLimitAmount": {
+                    "type": "integer"
+                },
+                "vaMandiriFeeTransactionInBetween": {
+                    "type": "integer"
+                },
+                "vaMandiriLowerLimitAmount": {
+                    "type": "integer"
+                },
+                "vaMandiriMerchantFeeAboveUpperLimitAmount": {
+                    "type": "integer"
+                },
+                "vaMandiriMerchantFeeBelowLowerLimitAmount": {
+                    "type": "integer"
+                },
+                "vaMandiriMerchantFeeInBetween": {
+                    "type": "integer"
+                },
+                "vaMandiriSubCompanyCode": {
+                    "type": "string"
+                },
+                "vaMandiriUpperLimitAmount": {
+                    "type": "integer"
+                },
+                "vaTokeUser": {
+                    "type": "string"
+                },
+                "vaTokenPassword": {
+                    "type": "string"
+                },
+                "vaTokenUrl": {
+                    "type": "string"
+                }
+            }
+        },
+        "dbmodels.LimitTransaction": {
+            "type": "object",
+            "properties": {
+                "createdAt": {
+                    "type": "string"
+                },
+                "createdBy": {
+                    "type": "string"
+                },
+                "featureProduct": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "levelMerchant": {
+                    "type": "string"
+                },
+                "limitAmount": {
+                    "type": "integer"
+                },
+                "limitFreq": {
+                    "type": "integer"
+                },
+                "minLimitAmount": {
+                    "type": "integer"
+                },
+                "timeFrame": {
+                    "type": "string"
+                },
+                "updatedAt": {
+                    "type": "string"
+                },
+                "updatedBy": {
+                    "type": "string"
+                },
+                "userCategoryId": {
+                    "type": "string"
+                }
+            }
+        },
+        "dbmodels.LogUpgradeFds": {
+            "type": "object",
+            "properties": {
+                "createdAt": {
+                    "type": "string"
+                },
+                "createdBy": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "phoneNumber": {
+                    "type": "string"
+                },
+                "req": {
+                    "type": "string"
+                },
+                "res": {
+                    "type": "string"
+                },
+                "retryAt": {
+                    "type": "string"
+                },
+                "retryBy": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "updatedAt": {
+                    "type": "string"
+                },
+                "updatedBy": {
+                    "type": "string"
+                }
+            }
+        },
+        "dbmodels.Lookup": {
+            "type": "object",
+            "properties": {
+                "actionType": {
+                    "type": "integer"
+                },
+                "approvalStatus": {
+                    "type": "integer"
+                },
+                "code": {
+                    "type": "string"
+                },
+                "createdAt": {
+                    "type": "string"
+                },
+                "createdBy": {
+                    "type": "string"
+                },
+                "descr": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "isAlternateEntry": {
+                    "type": "boolean"
+                },
+                "isHighRisk": {
+                    "type": "boolean"
+                },
+                "latestApproval": {
+                    "type": "string"
+                },
+                "latestApprover": {
+                    "type": "string"
+                },
+                "latestSuggestion": {
+                    "type": "string"
+                },
+                "latestSuggestor": {
+                    "type": "string"
+                },
+                "lookupGroup": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "orderNo": {
+                    "type": "integer"
+                },
+                "status": {
+                    "type": "integer"
+                },
+                "updatedAt": {
+                    "type": "string"
+                },
+                "updatedBy": {
+                    "type": "string"
+                },
+                "version": {
+                    "type": "integer"
+                }
+            }
+        },
+        "dbmodels.LookupGroup": {
+            "type": "object",
+            "properties": {
+                "createdAt": {
+                    "type": "string"
+                },
+                "createdBy": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "updatedAt": {
+                    "type": "string"
+                },
+                "updatedBy": {
+                    "type": "string"
+                }
+            }
+        },
+        "dbmodels.MasterTag": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "createdAt": {
+                    "type": "string"
+                },
+                "createdBy": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "boolean"
+                },
+                "updatedAt": {
+                    "type": "string"
+                },
+                "updatedBy": {
+                    "type": "string"
+                }
+            }
+        },
+        "dbmodels.MerchantBankAccount": {
+            "type": "object",
+            "properties": {
+                "accountName": {
+                    "type": "string"
+                },
+                "accountNumber": {
+                    "type": "string"
+                },
+                "bankCode": {
+                    "type": "string"
+                },
+                "createdAt": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "mid": {
+                    "type": "string"
+                },
+                "notes": {
+                    "type": "string"
+                },
+                "pushNotifData": {
+                    "type": "string"
+                },
+                "pushNotifStatus": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "updatedAt": {
+                    "type": "string"
+                },
+                "updatedBy": {
+                    "type": "string"
+                }
+            }
+        },
+        "dbmodels.MerchantBankLoan": {
+            "type": "object",
+            "properties": {
+                "accountNumber": {
+                    "type": "string"
+                },
+                "bankCode": {
+                    "type": "string"
+                },
+                "expireDate": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "limit": {
+                    "type": "integer"
+                },
+                "loanProductCode": {
+                    "type": "string"
+                },
+                "loanProductName": {
+                    "type": "string"
+                },
+                "masterBankLoanId": {
+                    "type": "string"
+                },
+                "mid": {
+                    "type": "string"
+                },
+                "phoneNumber": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "storeName": {
+                    "type": "string"
+                },
+                "tenor": {
+                    "type": "integer"
+                },
+                "uploadedAt": {
+                    "type": "string"
+                },
+                "uploadedBy": {
+                    "type": "string"
+                }
+            }
+        },
+        "dbmodels.MerchantMasterTag": {
+            "type": "object",
+            "properties": {
+                "createdAt": {
+                    "type": "string"
+                },
+                "createdBy": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "masterTagCode": {
+                    "type": "string"
+                },
+                "mid": {
+                    "type": "string"
+                },
+                "updatedAt": {
+                    "type": "string"
+                },
+                "updatedBy": {
+                    "type": "string"
+                }
+            }
+        },
+        "dbmodels.PartnerLink": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "created_at": {
+                    "type": "string"
+                },
+                "created_by": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "merchant_id": {
+                    "type": "string"
+                },
+                "partner_id": {
+                    "type": "string"
+                },
+                "updated_at": {
+                    "type": "string"
+                }
+            }
+        },
+        "dbmodels.SettlementConfig": {
+            "type": "object",
+            "properties": {
+                "bankCode": {
+                    "type": "string"
+                },
+                "createdAt": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "settlementType": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "updatedAt": {
+                    "type": "string"
+                },
+                "updatedBy": {
+                    "type": "string"
+                }
+            }
+        },
+        "dbmodels.SubMerchantBankLoan": {
+            "type": "object",
+            "properties": {
+                "bankCode": {
+                    "type": "string"
+                },
+                "createdAt": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "invoiceNo": {
+                    "type": "string"
+                },
+                "lastPayDate": {
+                    "type": "string"
+                },
+                "loanAmount": {
+                    "type": "number"
+                },
+                "loanEffectiveDate": {
+                    "type": "string"
+                },
+                "loanId": {
+                    "type": "string"
+                },
+                "loanMaturityDate": {
+                    "type": "string"
+                },
+                "loanPaidAmount": {
+                    "type": "number"
+                },
+                "loanProductCode": {
+                    "type": "string"
+                },
+                "loanStatus": {
+                    "type": "string"
+                },
+                "loanTxnDate": {
+                    "type": "string"
+                },
+                "masterBankLoanId": {
+                    "type": "string"
+                },
+                "mid": {
+                    "type": "string"
+                },
+                "updatedAt": {
+                    "type": "string"
+                }
+            }
+        },
+        "dbmodels.UpdatedDataMerchant": {
+            "type": "object",
+            "properties": {
+                "address": {
+                    "type": "string"
+                },
+                "addressBefore": {
+                    "type": "string"
+                },
+                "bestVisit": {
+                    "type": "string",
+                    "example": "15:00 - 17:00"
+                },
+                "bestVisitBefore": {
+                    "type": "string",
+                    "example": "15:00 - 17:00"
+                },
+                "categoryBisnis": {
+                    "type": "string",
+                    "example": "14"
+                },
+                "categoryBisnisBefore": {
+                    "type": "string",
+                    "example": "14"
+                },
+                "city": {
+                    "type": "string"
+                },
+                "cityBefore": {
+                    "type": "string"
+                },
+                "district": {
+                    "type": "string"
+                },
+                "districtBefore": {
+                    "type": "string"
+                },
+                "expireDate": {
+                    "type": "string"
+                },
+                "expireDateBefore": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "jenisLokasiBisnis": {
+                    "type": "string",
+                    "example": "4"
+                },
+                "jenisLokasiBisnisBefore": {
+                    "type": "string",
+                    "example": "4"
+                },
+                "latitude": {
+                    "type": "string",
+                    "example": "12.12345"
+                },
+                "latitudeBefore": {
+                    "type": "string",
+                    "example": "12.12345"
+                },
+                "loanBankAccount": {
+                    "type": "string"
+                },
+                "loanBankAccountBefore": {
+                    "type": "string"
+                },
+                "loanBankCode": {
+                    "type": "string"
+                },
+                "lokasiBisnis": {
+                    "type": "string",
+                    "example": "Pasar"
+                },
+                "lokasiBisnisBefore": {
+                    "type": "string",
+                    "example": "Pasar"
+                },
+                "longitude": {
+                    "type": "string",
+                    "example": "1.98765"
+                },
+                "longitudeBefore": {
+                    "type": "string",
+                    "example": "1.98765"
+                },
+                "merchantGroupId": {
+                    "type": "integer"
+                },
+                "merchantGroupIdBefore": {
+                    "type": "integer"
+                },
+                "mid": {
+                    "type": "string"
+                },
+                "operationHour": {
+                    "type": "string",
+                    "example": "08:00 - 17:00"
+                },
+                "operationHourBefore": {
+                    "type": "string",
+                    "example": "08:00 - 17:00"
+                },
+                "ownerAddress": {
+                    "type": "string",
+                    "example": "Jl. Merdaka"
+                },
+                "ownerAddressBefore": {
+                    "type": "string",
+                    "example": "Jl. Merdaka"
+                },
+                "ownerCity": {
+                    "type": "string",
+                    "example": "1303"
+                },
+                "ownerCityBefore": {
+                    "type": "string",
+                    "example": "1303"
+                },
+                "ownerKecamatan": {
+                    "type": "string",
+                    "example": "1303051"
+                },
+                "ownerKecamatanBefore": {
+                    "type": "string",
+                    "example": "1303051"
+                },
+                "ownerKelurahan": {
+                    "type": "string",
+                    "example": "1303051002"
+                },
+                "ownerKelurahanBefore": {
+                    "type": "string",
+                    "example": "1303051002"
+                },
+                "ownerName": {
+                    "type": "string",
+                    "example": "Joni"
+                },
+                "ownerNameBefore": {
+                    "type": "string",
+                    "example": "Joni"
+                },
+                "ownerNoId": {
+                    "type": "string",
+                    "example": "11111111111111"
+                },
+                "ownerNoIdBefore": {
+                    "type": "string",
+                    "example": "11111111111111"
+                },
+                "ownerPhoneNumber": {
+                    "type": "string",
+                    "example": "08123456789"
+                },
+                "ownerPhoneNumberBefore": {
+                    "type": "string",
+                    "example": "08123456789"
+                },
+                "ownerPostalCode": {
+                    "type": "string",
+                    "example": "10102"
+                },
+                "ownerPostalCodeBefore": {
+                    "type": "string",
+                    "example": "10102"
+                },
+                "ownerProvinsi": {
+                    "type": "string",
+                    "example": "13"
+                },
+                "ownerProvinsiBefore": {
+                    "type": "string",
+                    "example": "13"
+                },
+                "ownerTanggalLahir": {
+                    "type": "string",
+                    "example": "2021-10-11"
+                },
+                "ownerTanggalLahirBefore": {
+                    "type": "string",
+                    "example": "2021-10-11"
+                },
+                "partnerCode": {
+                    "type": "string"
+                },
+                "partnerCodeBefore": {
+                    "type": "string"
+                },
+                "partnerCustomerId": {
+                    "type": "string"
+                },
+                "partnerCustomerIdBefore": {
+                    "type": "string"
+                },
+                "patokan": {
+                    "type": "string",
+                    "example": "ATM BRI"
+                },
+                "patokanBefore": {
+                    "type": "string",
+                    "example": "ATM BRI"
+                },
+                "postalCode": {
+                    "type": "string"
+                },
+                "postalCodeBefore": {
+                    "type": "string"
+                },
+                "province": {
+                    "type": "string"
+                },
+                "provinceBefore": {
+                    "type": "string"
+                },
+                "rt": {
+                    "type": "string"
+                },
+                "rtBefore": {
+                    "type": "string"
+                },
+                "rw": {
+                    "type": "string"
+                },
+                "rwBefore": {
+                    "type": "string"
+                },
+                "srId": {
+                    "type": "string",
+                    "example": "1"
+                },
+                "srIdBefore": {
+                    "type": "string",
+                    "example": "1"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "storeName": {
+                    "type": "string"
+                },
+                "storeNameBefore": {
+                    "type": "string"
+                },
+                "storePhoneNumber": {
+                    "type": "string"
+                },
+                "storePhoneNumberBefore": {
+                    "type": "string"
+                },
+                "tipeBisnis": {
+                    "type": "string"
+                },
+                "tipeBisnisBefore": {
+                    "type": "string"
+                },
+                "updatedAt": {
+                    "type": "string"
+                },
+                "updatedBy": {
+                    "type": "string"
+                },
+                "userCategory": {
+                    "type": "string",
+                    "example": "idm"
+                },
+                "userCategoryBefore": {
+                    "type": "string",
+                    "example": "idm"
+                },
+                "userCategoryCode": {
+                    "type": "string"
+                },
+                "userCategoryCodeBefore": {
+                    "type": "string"
+                },
+                "village": {
+                    "type": "string"
+                },
+                "villageBefore": {
+                    "type": "string"
+                }
+            }
+        },
+        "dto.ReqAcquititionsDto": {
+            "type": "object",
+            "properties": {
+                "businessType": {
+                    "type": "string"
+                },
+                "createdAt": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "limit": {
+                    "type": "integer"
+                },
+                "logoUrl": {
+                    "type": "string"
+                },
+                "merchantCategory": {
+                    "type": "string"
+                },
+                "merchantGroupId": {
+                    "type": "integer"
+                },
+                "merchantType": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "page": {
+                    "type": "integer"
+                },
+                "registerUsingId": {
+                    "type": "boolean"
+                },
+                "salesRetails": {
+                    "type": "string"
+                },
+                "sequence": {
+                    "type": "integer"
+                },
+                "showInApp": {
+                    "type": "string"
+                },
+                "updatedAt": {
+                    "type": "string"
+                },
+                "updatedBy": {
+                    "type": "string"
+                }
+            }
+        },
+        "dto.ReqAkuisisiSfa": {
+            "type": "object",
+            "properties": {
+                "endDate": {
+                    "type": "string",
+                    "example": "2021-07-15"
+                },
+                "key": {
+                    "type": "string",
+                    "example": "Toko Syandi"
+                },
+                "limit": {
+                    "type": "integer",
+                    "example": 10
+                },
+                "page": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "startDate": {
+                    "type": "string",
+                    "example": "2021-07-01"
+                }
+            }
+        },
+        "dto.ReqAkuisisiSfaFailed": {
+            "type": "object",
+            "properties": {
+                "endDate": {
+                    "type": "string",
+                    "example": "2021-07-15"
+                },
+                "key": {
+                    "type": "string",
+                    "example": "Toko Syandi"
+                },
+                "limit": {
+                    "type": "integer",
+                    "example": 10
+                },
+                "page": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "startDate": {
+                    "type": "string",
+                    "example": "2021-07-01"
+                }
+            }
+        },
+        "dto.ReqApprovalMerchantBankAccountDto": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "notes": {
+                    "type": "string"
+                }
+            }
+        },
+        "dto.ReqBankListDto": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "fullName": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "limit": {
+                    "type": "integer"
+                },
+                "page": {
+                    "type": "integer"
+                },
+                "seq": {
+                    "type": "integer"
+                },
+                "settlementFeeConfig": {
+                    "type": "string"
+                },
+                "shortName": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "urlImage": {
+                    "type": "string"
+                }
+            }
+        },
+        "dto.ReqBlastNotificationSendAllDto": {
+            "type": "object",
+            "properties": {
+                "desc": {
+                    "type": "string"
+                },
+                "title": {
+                    "type": "string"
+                }
+            }
+        },
+        "dto.ReqFilterAcquititionsDto": {
+            "type": "object",
+            "properties": {
+                "businessType": {
+                    "type": "string",
+                    "example": "UMKM"
+                },
+                "limit": {
+                    "type": "integer",
+                    "example": 10
+                },
+                "merchantCategory": {
+                    "type": "string",
+                    "example": "Sales"
+                },
+                "merchantGroup": {
+                    "type": "integer",
+                    "example": 55
+                },
+                "name": {
+                    "type": "string",
+                    "example": "test"
+                },
+                "page": {
+                    "type": "integer",
+                    "example": 1
+                }
+            }
+        },
+        "dto.ReqFiturProductDto": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "icon": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "limit": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "notes": {
+                    "type": "string"
+                },
+                "page": {
+                    "type": "integer"
+                },
+                "productId": {
+                    "type": "integer"
+                },
+                "seq": {
+                    "type": "integer"
+                },
+                "url": {
+                    "type": "string"
+                }
+            }
+        },
+        "dto.ReqInstructionListDto": {
+            "type": "object",
+            "properties": {
+                "description": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "limit": {
+                    "type": "integer"
+                },
+                "logo": {
+                    "type": "string"
+                },
+                "page": {
+                    "type": "integer"
+                },
+                "sequence": {
+                    "type": "integer"
+                },
+                "title": {
+                    "type": "string"
+                }
+            }
+        },
+        "dto.ReqLimitTransactionDto": {
+            "type": "object",
+            "properties": {
+                "createdAt": {
+                    "type": "string"
+                },
+                "createdBy": {
+                    "type": "string"
+                },
+                "featureProduct": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "levelMerchant": {
+                    "type": "string"
+                },
+                "limit": {
+                    "type": "integer"
+                },
+                "limitAmount": {
+                    "type": "integer"
+                },
+                "limitFreq": {
+                    "type": "integer"
+                },
+                "minLimitAmount": {
+                    "type": "integer"
+                },
+                "page": {
+                    "type": "integer"
+                },
+                "timeFrame": {
+                    "type": "string"
+                },
+                "updatedAt": {
+                    "type": "string"
+                },
+                "updatedBy": {
+                    "type": "string"
+                },
+                "userCategoryId": {
+                    "type": "string"
+                }
+            }
+        },
+        "dto.ReqLoanProductMaintenanceDto": {
+            "type": "object",
+            "properties": {
+                "bankCode": {
+                    "type": "string"
+                },
+                "limit": {
+                    "type": "integer",
+                    "example": 10
+                },
+                "loanProductCode": {
+                    "type": "string"
+                },
+                "loanProductName": {
+                    "type": "string"
+                },
+                "page": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "status": {
+                    "type": "string"
+                }
+            }
+        },
+        "dto.ReqLogUpgradeFdsDto": {
+            "type": "object",
+            "properties": {
+                "limit": {
+                    "type": "integer"
+                },
+                "page": {
+                    "type": "integer"
+                },
+                "phoneNumber": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                }
+            }
+        },
+        "dto.ReqLookupDto": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "descr": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "limit": {
+                    "type": "integer"
+                },
+                "lookupGroup": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "orderNo": {
+                    "type": "integer"
+                },
+                "page": {
+                    "type": "integer"
+                }
+            }
+        },
+        "dto.ReqLookupGroupDto": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "limit": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "page": {
+                    "type": "integer"
+                }
+            }
+        },
+        "dto.ReqMasterTagDto": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string",
+                    "example": "00001"
+                },
+                "description": {
+                    "type": "string",
+                    "example": "nama nama ikan"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "limit": {
+                    "type": "integer",
+                    "example": 10
+                },
+                "name": {
+                    "type": "string",
+                    "example": "sampo"
+                },
+                "page": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "status": {
+                    "type": "string",
+                    "example": "active"
+                }
+            }
+        },
+        "dto.ReqMerchantBankAccountDto": {
+            "type": "object",
+            "properties": {
+                "accountName": {
+                    "type": "string"
+                },
+                "accountNumber": {
+                    "type": "string"
+                },
+                "bankCode": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "limit": {
+                    "type": "integer"
+                },
+                "mid": {
+                    "type": "string"
+                },
+                "notes": {
+                    "type": "string"
+                },
+                "page": {
+                    "type": "integer"
+                },
+                "status": {
+                    "type": "string"
+                }
+            }
+        },
+        "dto.ReqMerchantBankLoanDto": {
+            "type": "object",
+            "properties": {
+                "limit": {
+                    "type": "integer",
+                    "example": 10
+                },
+                "mid": {
+                    "type": "string"
+                },
+                "page": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "phoneNumber": {
+                    "type": "string",
+                    "example": "0823131231"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "storeName": {
+                    "type": "string",
+                    "example": "Toko Fulan"
+                }
+            }
+        },
+        "dto.ReqMerchantMasterTagDto": {
+            "type": "object",
+            "properties": {
+                "limit": {
+                    "type": "integer",
+                    "example": 10
+                },
+                "masterTagCode": {
+                    "type": "string"
+                },
+                "mid": {
+                    "type": "string"
+                },
+                "page": {
+                    "type": "integer",
+                    "example": 1
+                }
+            }
+        },
+        "dto.ReqMonitoringActivationFDSDto": {
+            "type": "object",
+            "properties": {
+                "endDate": {
+                    "type": "string",
+                    "example": "2021-07-15"
+                },
+                "key": {
+                    "type": "string",
+                    "example": "Toko Syandi"
+                },
+                "limit": {
+                    "type": "integer",
+                    "example": 10
+                },
+                "page": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "startDate": {
+                    "type": "string",
+                    "example": "2021-07-01"
+                }
+            }
+        },
+        "dto.ReqPartnerLinkDto": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "created_at": {
+                    "type": "string"
+                },
+                "created_by": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "limit": {
+                    "type": "integer"
+                },
+                "merchant_id": {
+                    "type": "string"
+                },
+                "page": {
+                    "type": "integer"
+                },
+                "partner_id": {
+                    "type": "string"
+                },
+                "updated_at": {
+                    "type": "string"
+                }
+            }
+        },
+        "dto.ReqSaveLoanProductMaintenanceDto": {
+            "type": "object",
+            "properties": {
+                "adminFeeType": {
+                    "type": "string"
+                },
+                "adminFeeValue": {
+                    "type": "number"
+                },
+                "bankCode": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "loanProductCode": {
+                    "type": "string"
+                },
+                "loanProductName": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                }
+            }
+        },
+        "dto.ReqSaveValidationCodeMasterTagDto": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "masterTagId": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "validationCodeId": {
+                    "type": "integer",
+                    "example": 1
+                }
+            }
+        },
+        "dto.ReqSettlementConfigDto": {
+            "type": "object",
+            "properties": {
+                "bankCode": {
+                    "description": "ID             int64  `json:\"id\"`",
+                    "type": "string"
+                },
+                "limit": {
+                    "type": "integer"
+                },
+                "page": {
+                    "type": "integer"
+                },
+                "settlementType": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "user": {
+                    "type": "string"
+                }
+            }
+        },
+        "dto.ReqSubMerchantBankloanDto": {
+            "type": "object",
+            "properties": {
+                "masterBankLoanId": {
+                    "type": "string"
+                }
+            }
+        },
+        "dto.ReqUpdateDataMerchantDto": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                }
+            }
+        },
+        "dto.ReqUpdatedDataMerchantDto": {
+            "type": "object",
+            "properties": {
+                "limit": {
+                    "type": "integer"
+                },
+                "loanBankCode": {
+                    "type": "string"
+                },
+                "mid": {
+                    "type": "string"
+                },
+                "page": {
+                    "type": "integer"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "storeName": {
+                    "type": "string"
+                },
+                "updatedAt": {
+                    "type": "string"
+                },
+                "updatedBy": {
+                    "type": "string"
+                }
+            }
+        },
+        "dto.ReqValidationCodeDto": {
+            "type": "object",
+            "properties": {
+                "appId": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "limit": {
+                    "type": "integer"
+                },
+                "page": {
+                    "type": "integer"
+                },
+                "userCategoryCode": {
+                    "type": "string"
+                },
+                "validFrom": {
+                    "type": "string"
+                },
+                "validTo": {
+                    "type": "string"
+                },
+                "validationCode": {
+                    "type": "string"
+                }
+            }
+        },
+        "dto.ReqValidationCodeMasterTagDto": {
+            "type": "object",
+            "properties": {
+                "limit": {
+                    "type": "integer",
+                    "example": 10
+                },
+                "masterTagCode": {
+                    "type": "string",
+                    "example": "001"
+                },
+                "masterTagId": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "page": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "validationCodeId": {
+                    "type": "integer",
+                    "example": 1
+                }
+            }
+        },
+        "dto.ResAcquititionsDto": {
+            "type": "object",
+            "properties": {
+                "businessType": {
+                    "type": "string"
+                },
+                "createdAt": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "logoUrl": {
+                    "type": "string"
+                },
+                "merchantCategory": {
+                    "type": "string"
+                },
+                "merchantGroupId": {
+                    "type": "integer"
+                },
+                "merchantType": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "registerUsingId": {
+                    "type": "boolean"
+                },
+                "salesRetails": {
+                    "type": "string"
+                },
+                "sequence": {
+                    "type": "integer"
+                },
+                "showInApp": {
+                    "type": "string"
+                },
+                "updatedAt": {
+                    "type": "string"
+                },
+                "updatedBy": {
+                    "type": "string"
+                }
+            }
+        },
+        "dto.ResInstructionListDto": {
+            "type": "object",
+            "properties": {
+                "description": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "logo": {
+                    "type": "string"
+                },
+                "sequence": {
+                    "type": "integer"
+                },
+                "title": {
+                    "type": "string"
+                }
+            }
+        },
+        "dto.ResValidationCodeDto": {
+            "type": "object",
+            "properties": {
+                "appId": {
+                    "type": "string"
+                },
+                "appName": {
+                    "type": "string"
+                },
+                "createdAt": {
+                    "type": "string"
+                },
+                "createdBy": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "updatedAt": {
+                    "type": "string"
+                },
+                "updatedBy": {
+                    "type": "string"
+                },
+                "userCategoryCode": {
+                    "type": "string"
+                },
+                "validFrom": {
+                    "type": "string"
+                },
+                "validTo": {
+                    "type": "string"
+                },
+                "validationCode": {
+                    "type": "string"
+                }
+            }
+        },
+        "dto.ResValidationCodeMasterTagDto": {
+            "type": "object",
+            "properties": {
+                "createdAt": {
+                    "type": "string"
+                },
+                "createdBy": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "masterTagCode": {
+                    "type": "string"
+                },
+                "masterTagId": {
+                    "type": "integer"
+                },
+                "updatedAt": {
+                    "type": "string"
+                },
+                "updatedBy": {
+                    "type": "string"
+                },
+                "validationCode": {
+                    "type": "string"
+                },
+                "validationCodeId": {
+                    "type": "integer"
+                }
+            }
+        },
+        "minio.UploadRequest": {
+            "type": "object",
+            "properties": {
+                "bucketName": {
+                    "type": "string"
+                },
+                "contentType": {
+                    "type": "string"
+                },
+                "data": {
+                    "type": "string"
+                },
+                "nameFile": {
+                    "type": "string"
+                }
+            }
+        },
+        "models.Response": {
+            "type": "object",
+            "properties": {
+                "contents": {},
+                "data": {},
+                "errCode": {
+                    "type": "string"
+                },
+                "errDesc": {
+                    "type": "string"
+                },
+                "totalData": {
+                    "type": "integer"
+                }
+            }
+        }
+    }
+}

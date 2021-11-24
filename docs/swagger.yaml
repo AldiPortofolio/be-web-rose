@@ -1,0 +1,3104 @@
+definitions:
+  dbmodels.AkuisisiSfa:
+    properties:
+      agent_company_id:
+        type: string
+      agent_id:
+        type: string
+      agent_name:
+        type: string
+      agent_phone_number:
+        type: string
+      category:
+        type: string
+      description:
+        type: string
+      device_brand:
+        type: string
+      device_group:
+        type: string
+      device_type:
+        type: string
+      existing_qr_value:
+        type: string
+      foto_preprinted:
+        type: string
+      id:
+        type: integer
+      institution_id:
+        type: string
+      kategori_bisnis:
+        type: string
+      level:
+        type: string
+      merchant_group_name:
+        type: string
+      merchant_outlet_id:
+        type: string
+      merchant_pan:
+        type: string
+      metode_pembayaran:
+        type: string
+      nmid:
+        type: string
+      notes:
+        type: string
+      outlet_id:
+        type: string
+      owner_address:
+        type: string
+      owner_firstname:
+        type: string
+      owner_jenis_kelamin:
+        type: string
+      owner_kabupaten_kota:
+        type: string
+      owner_kecamatan:
+        type: string
+      owner_kelurahan:
+        type: string
+      owner_kode_pos:
+        type: string
+      owner_lastname:
+        type: string
+      owner_nama_gadis_ibu_kandung:
+        type: string
+      owner_no_id:
+        type: string
+      owner_no_telf:
+        type: string
+      owner_no_telf_lainnya:
+        type: string
+      owner_pekerjaan:
+        type: string
+      owner_provinsi:
+        type: string
+      owner_rt:
+        type: string
+      owner_rw:
+        type: string
+      owner_tanggal_lahir:
+        type: string
+      owner_tempat_lahir:
+        type: string
+      owner_tgl_expired_id:
+        type: string
+      owner_tipe_id:
+        type: string
+      owner_title:
+        type: string
+      pairVerifySimilarity:
+        type: string
+      partner_customer_id:
+        type: string
+      photo_ktp:
+        type: string
+      photo_location:
+        type: string
+      photo_location_2:
+        type: string
+      photo_location_left:
+        type: string
+      photo_location_right:
+        type: string
+      photo_selfie:
+        type: string
+      photo_sign:
+        type: string
+      priority_level:
+        type: string
+      srId:
+        type: string
+      status:
+        type: string
+      store_alamat:
+        type: string
+      store_jam_operasional:
+        type: string
+      store_jenis_lokasi_bisnis:
+        type: string
+      store_jenis_usaha:
+        type: string
+      store_kabupaten_kota:
+        type: string
+      store_kecamatan:
+        type: string
+      store_kelurahan:
+        type: string
+      store_latitude:
+        type: string
+      store_lokasi_bisnis:
+        type: string
+      store_longitude:
+        type: string
+      store_name:
+        type: string
+      store_name_preprinted:
+        type: string
+      store_phone_number:
+        type: string
+      store_postal_code:
+        type: string
+      store_provinsi:
+        type: string
+      terminal_phone_number:
+        type: string
+      terminal_provider:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  dbmodels.AkuisisiSfaFailed:
+    properties:
+      id:
+        type: integer
+      merchant_outlet_id:
+        type: string
+      merchant_pan:
+        type: string
+      request:
+        type: string
+      response:
+        type: string
+      store_name:
+        type: string
+      store_phone_number:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  dbmodels.BankList:
+    properties:
+      code:
+        type: string
+      createdAt:
+        type: string
+      createdBy:
+        type: string
+      fullName:
+        type: string
+      id:
+        type: integer
+      seq:
+        type: integer
+      shortName:
+        type: string
+      status:
+        type: string
+      updatedAt:
+        type: string
+      updatedBy:
+        type: string
+      urlImage:
+        type: string
+    type: object
+  dbmodels.ConfigVaMerchantGroup:
+    properties:
+      VaTransactionType:
+        type: string
+      hostType:
+        type: string
+      id:
+        type: integer
+      inquiryUrl:
+        type: string
+      merchantGroupId:
+        type: integer
+      paymentUrl:
+        type: string
+      vaAuthKey:
+        type: string
+      vaAuthType:
+        type: string
+      vaBca:
+        type: string
+      vaBcaCompanyCode:
+        type: string
+      vaBcaFeeTransactionAboveUpperLimitAmount:
+        type: integer
+      vaBcaFeeTransactionBelowLowerLimitAmount:
+        type: integer
+      vaBcaFeeTransactionInBetween:
+        type: integer
+      vaBcaLowerLimitAmount:
+        type: integer
+      vaBcaMerchantFeeAboveUpperLimitAmount:
+        type: integer
+      vaBcaMerchantFeeBelowLowerLimitAmount:
+        type: integer
+      vaBcaMerchantFeeInBetween:
+        type: integer
+      vaBcaSubCompanyCode:
+        type: string
+      vaBcaUpperLimitAmount:
+        type: integer
+      vaBri:
+        type: string
+      vaBriCompanyCode:
+        type: string
+      vaBriFeeTransactionAboveUpperLimitAmount:
+        type: integer
+      vaBriFeeTransactionBelowLowerLimitAmount:
+        type: integer
+      vaBriFeeTransactionInBetween:
+        type: integer
+      vaBriLowerLimitAmount:
+        type: integer
+      vaBriMerchantFeeAboveUpperLimitAmount:
+        type: integer
+      vaBriMerchantFeeBelowLowerLimitAmount:
+        type: integer
+      vaBriMerchantFeeInBetween:
+        type: integer
+      vaBriSubCompanyCode:
+        type: string
+      vaBriUpperLimitAmount:
+        type: integer
+      vaLain:
+        type: string
+      vaLainCompanyCode:
+        type: string
+      vaLainFeeTransactionAboveUpperLimitAmount:
+        type: integer
+      vaLainFeeTransactionBelowLowerLimitAmount:
+        type: integer
+      vaLainFeeTransactionInBetween:
+        type: integer
+      vaLainLowerLimitAmount:
+        type: integer
+      vaLainMerchantFeeAboveUpperLimitAmount:
+        type: integer
+      vaLainMerchantFeeBelowLowerLimitAmount:
+        type: integer
+      vaLainMerchantFeeInBetween:
+        type: integer
+      vaLainSubCompanyCode:
+        type: string
+      vaLainUpperLimitAmount:
+        type: integer
+      vaMandiri:
+        type: string
+      vaMandiriCompanyCode:
+        type: string
+      vaMandiriFeeTransactionAboveUpperLimitAmount:
+        type: integer
+      vaMandiriFeeTransactionBelowLowerLimitAmount:
+        type: integer
+      vaMandiriFeeTransactionInBetween:
+        type: integer
+      vaMandiriLowerLimitAmount:
+        type: integer
+      vaMandiriMerchantFeeAboveUpperLimitAmount:
+        type: integer
+      vaMandiriMerchantFeeBelowLowerLimitAmount:
+        type: integer
+      vaMandiriMerchantFeeInBetween:
+        type: integer
+      vaMandiriSubCompanyCode:
+        type: string
+      vaMandiriUpperLimitAmount:
+        type: integer
+      vaTokeUser:
+        type: string
+      vaTokenPassword:
+        type: string
+      vaTokenUrl:
+        type: string
+    type: object
+  dbmodels.LimitTransaction:
+    properties:
+      createdAt:
+        type: string
+      createdBy:
+        type: string
+      featureProduct:
+        type: string
+      id:
+        type: integer
+      levelMerchant:
+        type: string
+      limitAmount:
+        type: integer
+      limitFreq:
+        type: integer
+      minLimitAmount:
+        type: integer
+      timeFrame:
+        type: string
+      updatedAt:
+        type: string
+      updatedBy:
+        type: string
+      userCategoryId:
+        type: string
+    type: object
+  dbmodels.LogUpgradeFds:
+    properties:
+      createdAt:
+        type: string
+      createdBy:
+        type: string
+      id:
+        type: integer
+      phoneNumber:
+        type: string
+      req:
+        type: string
+      res:
+        type: string
+      retryAt:
+        type: string
+      retryBy:
+        type: string
+      status:
+        type: string
+      updatedAt:
+        type: string
+      updatedBy:
+        type: string
+    type: object
+  dbmodels.Lookup:
+    properties:
+      actionType:
+        type: integer
+      approvalStatus:
+        type: integer
+      code:
+        type: string
+      createdAt:
+        type: string
+      createdBy:
+        type: string
+      descr:
+        type: string
+      id:
+        type: integer
+      isAlternateEntry:
+        type: boolean
+      isHighRisk:
+        type: boolean
+      latestApproval:
+        type: string
+      latestApprover:
+        type: string
+      latestSuggestion:
+        type: string
+      latestSuggestor:
+        type: string
+      lookupGroup:
+        type: string
+      name:
+        type: string
+      orderNo:
+        type: integer
+      status:
+        type: integer
+      updatedAt:
+        type: string
+      updatedBy:
+        type: string
+      version:
+        type: integer
+    type: object
+  dbmodels.LookupGroup:
+    properties:
+      createdAt:
+        type: string
+      createdBy:
+        type: string
+      id:
+        type: integer
+      name:
+        type: string
+      updatedAt:
+        type: string
+      updatedBy:
+        type: string
+    type: object
+  dbmodels.MasterTag:
+    properties:
+      code:
+        type: string
+      createdAt:
+        type: string
+      createdBy:
+        type: string
+      description:
+        type: string
+      id:
+        type: integer
+      name:
+        type: string
+      status:
+        type: boolean
+      updatedAt:
+        type: string
+      updatedBy:
+        type: string
+    type: object
+  dbmodels.MerchantBankAccount:
+    properties:
+      accountName:
+        type: string
+      accountNumber:
+        type: string
+      bankCode:
+        type: string
+      createdAt:
+        type: string
+      id:
+        type: integer
+      mid:
+        type: string
+      notes:
+        type: string
+      pushNotifData:
+        type: string
+      pushNotifStatus:
+        type: string
+      status:
+        type: string
+      updatedAt:
+        type: string
+      updatedBy:
+        type: string
+    type: object
+  dbmodels.MerchantBankLoan:
+    properties:
+      accountNumber:
+        type: string
+      bankCode:
+        type: string
+      expireDate:
+        type: string
+      id:
+        type: integer
+      limit:
+        type: integer
+      loanProductCode:
+        type: string
+      loanProductName:
+        type: string
+      masterBankLoanId:
+        type: string
+      mid:
+        type: string
+      phoneNumber:
+        type: string
+      status:
+        type: string
+      storeName:
+        type: string
+      tenor:
+        type: integer
+      uploadedAt:
+        type: string
+      uploadedBy:
+        type: string
+    type: object
+  dbmodels.MerchantMasterTag:
+    properties:
+      createdAt:
+        type: string
+      createdBy:
+        type: string
+      id:
+        type: integer
+      masterTagCode:
+        type: string
+      mid:
+        type: string
+      updatedAt:
+        type: string
+      updatedBy:
+        type: string
+    type: object
+  dbmodels.PartnerLink:
+    properties:
+      code:
+        type: string
+      created_at:
+        type: string
+      created_by:
+        type: string
+      id:
+        type: integer
+      merchant_id:
+        type: string
+      partner_id:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  dbmodels.SettlementConfig:
+    properties:
+      bankCode:
+        type: string
+      createdAt:
+        type: string
+      id:
+        type: integer
+      settlementType:
+        type: string
+      status:
+        type: string
+      updatedAt:
+        type: string
+      updatedBy:
+        type: string
+    type: object
+  dbmodels.SubMerchantBankLoan:
+    properties:
+      bankCode:
+        type: string
+      createdAt:
+        type: string
+      id:
+        type: integer
+      invoiceNo:
+        type: string
+      lastPayDate:
+        type: string
+      loanAmount:
+        type: number
+      loanEffectiveDate:
+        type: string
+      loanId:
+        type: string
+      loanMaturityDate:
+        type: string
+      loanPaidAmount:
+        type: number
+      loanProductCode:
+        type: string
+      loanStatus:
+        type: string
+      loanTxnDate:
+        type: string
+      masterBankLoanId:
+        type: string
+      mid:
+        type: string
+      updatedAt:
+        type: string
+    type: object
+  dbmodels.UpdatedDataMerchant:
+    properties:
+      address:
+        type: string
+      addressBefore:
+        type: string
+      bestVisit:
+        example: 15:00 - 17:00
+        type: string
+      bestVisitBefore:
+        example: 15:00 - 17:00
+        type: string
+      categoryBisnis:
+        example: "14"
+        type: string
+      categoryBisnisBefore:
+        example: "14"
+        type: string
+      city:
+        type: string
+      cityBefore:
+        type: string
+      district:
+        type: string
+      districtBefore:
+        type: string
+      expireDate:
+        type: string
+      expireDateBefore:
+        type: string
+      id:
+        type: integer
+      jenisLokasiBisnis:
+        example: "4"
+        type: string
+      jenisLokasiBisnisBefore:
+        example: "4"
+        type: string
+      latitude:
+        example: "12.12345"
+        type: string
+      latitudeBefore:
+        example: "12.12345"
+        type: string
+      loanBankAccount:
+        type: string
+      loanBankAccountBefore:
+        type: string
+      loanBankCode:
+        type: string
+      lokasiBisnis:
+        example: Pasar
+        type: string
+      lokasiBisnisBefore:
+        example: Pasar
+        type: string
+      longitude:
+        example: "1.98765"
+        type: string
+      longitudeBefore:
+        example: "1.98765"
+        type: string
+      merchantGroupId:
+        type: integer
+      merchantGroupIdBefore:
+        type: integer
+      mid:
+        type: string
+      operationHour:
+        example: 08:00 - 17:00
+        type: string
+      operationHourBefore:
+        example: 08:00 - 17:00
+        type: string
+      ownerAddress:
+        example: Jl. Merdaka
+        type: string
+      ownerAddressBefore:
+        example: Jl. Merdaka
+        type: string
+      ownerCity:
+        example: "1303"
+        type: string
+      ownerCityBefore:
+        example: "1303"
+        type: string
+      ownerKecamatan:
+        example: "1303051"
+        type: string
+      ownerKecamatanBefore:
+        example: "1303051"
+        type: string
+      ownerKelurahan:
+        example: "1303051002"
+        type: string
+      ownerKelurahanBefore:
+        example: "1303051002"
+        type: string
+      ownerName:
+        example: Joni
+        type: string
+      ownerNameBefore:
+        example: Joni
+        type: string
+      ownerNoId:
+        example: "11111111111111"
+        type: string
+      ownerNoIdBefore:
+        example: "11111111111111"
+        type: string
+      ownerPhoneNumber:
+        example: "08123456789"
+        type: string
+      ownerPhoneNumberBefore:
+        example: "08123456789"
+        type: string
+      ownerPostalCode:
+        example: "10102"
+        type: string
+      ownerPostalCodeBefore:
+        example: "10102"
+        type: string
+      ownerProvinsi:
+        example: "13"
+        type: string
+      ownerProvinsiBefore:
+        example: "13"
+        type: string
+      ownerTanggalLahir:
+        example: "2021-10-11"
+        type: string
+      ownerTanggalLahirBefore:
+        example: "2021-10-11"
+        type: string
+      partnerCode:
+        type: string
+      partnerCodeBefore:
+        type: string
+      partnerCustomerId:
+        type: string
+      partnerCustomerIdBefore:
+        type: string
+      patokan:
+        example: ATM BRI
+        type: string
+      patokanBefore:
+        example: ATM BRI
+        type: string
+      postalCode:
+        type: string
+      postalCodeBefore:
+        type: string
+      province:
+        type: string
+      provinceBefore:
+        type: string
+      rt:
+        type: string
+      rtBefore:
+        type: string
+      rw:
+        type: string
+      rwBefore:
+        type: string
+      srId:
+        example: "1"
+        type: string
+      srIdBefore:
+        example: "1"
+        type: string
+      status:
+        type: string
+      storeName:
+        type: string
+      storeNameBefore:
+        type: string
+      storePhoneNumber:
+        type: string
+      storePhoneNumberBefore:
+        type: string
+      tipeBisnis:
+        type: string
+      tipeBisnisBefore:
+        type: string
+      updatedAt:
+        type: string
+      updatedBy:
+        type: string
+      userCategory:
+        example: idm
+        type: string
+      userCategoryBefore:
+        example: idm
+        type: string
+      userCategoryCode:
+        type: string
+      userCategoryCodeBefore:
+        type: string
+      village:
+        type: string
+      villageBefore:
+        type: string
+    type: object
+  dto.ReqAcquititionsDto:
+    properties:
+      businessType:
+        type: string
+      createdAt:
+        type: string
+      id:
+        type: integer
+      limit:
+        type: integer
+      logoUrl:
+        type: string
+      merchantCategory:
+        type: string
+      merchantGroupId:
+        type: integer
+      merchantType:
+        type: string
+      name:
+        type: string
+      page:
+        type: integer
+      registerUsingId:
+        type: boolean
+      salesRetails:
+        type: string
+      sequence:
+        type: integer
+      showInApp:
+        type: string
+      updatedAt:
+        type: string
+      updatedBy:
+        type: string
+    type: object
+  dto.ReqAkuisisiSfa:
+    properties:
+      endDate:
+        example: "2021-07-15"
+        type: string
+      key:
+        example: Toko Syandi
+        type: string
+      limit:
+        example: 10
+        type: integer
+      page:
+        example: 1
+        type: integer
+      startDate:
+        example: "2021-07-01"
+        type: string
+    type: object
+  dto.ReqAkuisisiSfaFailed:
+    properties:
+      endDate:
+        example: "2021-07-15"
+        type: string
+      key:
+        example: Toko Syandi
+        type: string
+      limit:
+        example: 10
+        type: integer
+      page:
+        example: 1
+        type: integer
+      startDate:
+        example: "2021-07-01"
+        type: string
+    type: object
+  dto.ReqApprovalMerchantBankAccountDto:
+    properties:
+      id:
+        type: integer
+      notes:
+        type: string
+    type: object
+  dto.ReqBankListDto:
+    properties:
+      code:
+        type: string
+      fullName:
+        type: string
+      id:
+        type: integer
+      limit:
+        type: integer
+      page:
+        type: integer
+      seq:
+        type: integer
+      settlementFeeConfig:
+        type: string
+      shortName:
+        type: string
+      status:
+        type: string
+      urlImage:
+        type: string
+    type: object
+  dto.ReqBlastNotificationSendAllDto:
+    properties:
+      desc:
+        type: string
+      title:
+        type: string
+    type: object
+  dto.ReqFilterAcquititionsDto:
+    properties:
+      businessType:
+        example: UMKM
+        type: string
+      limit:
+        example: 10
+        type: integer
+      merchantCategory:
+        example: Sales
+        type: string
+      merchantGroup:
+        example: 55
+        type: integer
+      name:
+        example: test
+        type: string
+      page:
+        example: 1
+        type: integer
+    type: object
+  dto.ReqFiturProductDto:
+    properties:
+      code:
+        type: string
+      icon:
+        type: string
+      id:
+        type: integer
+      limit:
+        type: integer
+      name:
+        type: string
+      notes:
+        type: string
+      page:
+        type: integer
+      productId:
+        type: integer
+      seq:
+        type: integer
+      url:
+        type: string
+    type: object
+  dto.ReqInstructionListDto:
+    properties:
+      description:
+        type: string
+      id:
+        type: integer
+      limit:
+        type: integer
+      logo:
+        type: string
+      page:
+        type: integer
+      sequence:
+        type: integer
+      title:
+        type: string
+    type: object
+  dto.ReqLimitTransactionDto:
+    properties:
+      createdAt:
+        type: string
+      createdBy:
+        type: string
+      featureProduct:
+        type: string
+      id:
+        type: integer
+      levelMerchant:
+        type: string
+      limit:
+        type: integer
+      limitAmount:
+        type: integer
+      limitFreq:
+        type: integer
+      minLimitAmount:
+        type: integer
+      page:
+        type: integer
+      timeFrame:
+        type: string
+      updatedAt:
+        type: string
+      updatedBy:
+        type: string
+      userCategoryId:
+        type: string
+    type: object
+  dto.ReqLoanProductMaintenanceDto:
+    properties:
+      bankCode:
+        type: string
+      limit:
+        example: 10
+        type: integer
+      loanProductCode:
+        type: string
+      loanProductName:
+        type: string
+      page:
+        example: 1
+        type: integer
+      status:
+        type: string
+    type: object
+  dto.ReqLogUpgradeFdsDto:
+    properties:
+      limit:
+        type: integer
+      page:
+        type: integer
+      phoneNumber:
+        type: string
+      status:
+        type: string
+    type: object
+  dto.ReqLookupDto:
+    properties:
+      code:
+        type: string
+      descr:
+        type: string
+      id:
+        type: integer
+      limit:
+        type: integer
+      lookupGroup:
+        type: string
+      name:
+        type: string
+      orderNo:
+        type: integer
+      page:
+        type: integer
+    type: object
+  dto.ReqLookupGroupDto:
+    properties:
+      id:
+        type: integer
+      limit:
+        type: integer
+      name:
+        type: string
+      page:
+        type: integer
+    type: object
+  dto.ReqMasterTagDto:
+    properties:
+      code:
+        example: "00001"
+        type: string
+      description:
+        example: nama nama ikan
+        type: string
+      id:
+        type: integer
+      limit:
+        example: 10
+        type: integer
+      name:
+        example: sampo
+        type: string
+      page:
+        example: 1
+        type: integer
+      status:
+        example: active
+        type: string
+    type: object
+  dto.ReqMerchantBankAccountDto:
+    properties:
+      accountName:
+        type: string
+      accountNumber:
+        type: string
+      bankCode:
+        type: string
+      id:
+        type: integer
+      limit:
+        type: integer
+      mid:
+        type: string
+      notes:
+        type: string
+      page:
+        type: integer
+      status:
+        type: string
+    type: object
+  dto.ReqMerchantBankLoanDto:
+    properties:
+      limit:
+        example: 10
+        type: integer
+      mid:
+        type: string
+      page:
+        example: 1
+        type: integer
+      phoneNumber:
+        example: "0823131231"
+        type: string
+      status:
+        type: string
+      storeName:
+        example: Toko Fulan
+        type: string
+    type: object
+  dto.ReqMerchantMasterTagDto:
+    properties:
+      limit:
+        example: 10
+        type: integer
+      masterTagCode:
+        type: string
+      mid:
+        type: string
+      page:
+        example: 1
+        type: integer
+    type: object
+  dto.ReqMonitoringActivationFDSDto:
+    properties:
+      endDate:
+        example: "2021-07-15"
+        type: string
+      key:
+        example: Toko Syandi
+        type: string
+      limit:
+        example: 10
+        type: integer
+      page:
+        example: 1
+        type: integer
+      startDate:
+        example: "2021-07-01"
+        type: string
+    type: object
+  dto.ReqPartnerLinkDto:
+    properties:
+      code:
+        type: string
+      created_at:
+        type: string
+      created_by:
+        type: string
+      id:
+        type: integer
+      limit:
+        type: integer
+      merchant_id:
+        type: string
+      page:
+        type: integer
+      partner_id:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  dto.ReqSaveLoanProductMaintenanceDto:
+    properties:
+      adminFeeType:
+        type: string
+      adminFeeValue:
+        type: number
+      bankCode:
+        type: string
+      description:
+        type: string
+      id:
+        type: integer
+      loanProductCode:
+        type: string
+      loanProductName:
+        type: string
+      status:
+        type: string
+    type: object
+  dto.ReqSaveValidationCodeMasterTagDto:
+    properties:
+      id:
+        type: integer
+      masterTagId:
+        example: 1
+        type: integer
+      validationCodeId:
+        example: 1
+        type: integer
+    type: object
+  dto.ReqSettlementConfigDto:
+    properties:
+      bankCode:
+        description: ID             int64  `json:"id"`
+        type: string
+      limit:
+        type: integer
+      page:
+        type: integer
+      settlementType:
+        type: string
+      status:
+        type: string
+      user:
+        type: string
+    type: object
+  dto.ReqSubMerchantBankloanDto:
+    properties:
+      masterBankLoanId:
+        type: string
+    type: object
+  dto.ReqUpdateDataMerchantDto:
+    properties:
+      id:
+        type: integer
+    type: object
+  dto.ReqUpdatedDataMerchantDto:
+    properties:
+      limit:
+        type: integer
+      loanBankCode:
+        type: string
+      mid:
+        type: string
+      page:
+        type: integer
+      status:
+        type: string
+      storeName:
+        type: string
+      updatedAt:
+        type: string
+      updatedBy:
+        type: string
+    type: object
+  dto.ReqValidationCodeDto:
+    properties:
+      appId:
+        type: string
+      id:
+        type: integer
+      limit:
+        type: integer
+      page:
+        type: integer
+      userCategoryCode:
+        type: string
+      validFrom:
+        type: string
+      validTo:
+        type: string
+      validationCode:
+        type: string
+    type: object
+  dto.ReqValidationCodeMasterTagDto:
+    properties:
+      limit:
+        example: 10
+        type: integer
+      masterTagCode:
+        example: "001"
+        type: string
+      masterTagId:
+        example: 1
+        type: integer
+      page:
+        example: 1
+        type: integer
+      validationCodeId:
+        example: 1
+        type: integer
+    type: object
+  dto.ResAcquititionsDto:
+    properties:
+      businessType:
+        type: string
+      createdAt:
+        type: string
+      id:
+        type: integer
+      logoUrl:
+        type: string
+      merchantCategory:
+        type: string
+      merchantGroupId:
+        type: integer
+      merchantType:
+        type: string
+      name:
+        type: string
+      registerUsingId:
+        type: boolean
+      salesRetails:
+        type: string
+      sequence:
+        type: integer
+      showInApp:
+        type: string
+      updatedAt:
+        type: string
+      updatedBy:
+        type: string
+    type: object
+  dto.ResInstructionListDto:
+    properties:
+      description:
+        type: string
+      id:
+        type: integer
+      logo:
+        type: string
+      sequence:
+        type: integer
+      title:
+        type: string
+    type: object
+  dto.ResValidationCodeDto:
+    properties:
+      appId:
+        type: string
+      appName:
+        type: string
+      createdAt:
+        type: string
+      createdBy:
+        type: string
+      id:
+        type: integer
+      updatedAt:
+        type: string
+      updatedBy:
+        type: string
+      userCategoryCode:
+        type: string
+      validFrom:
+        type: string
+      validTo:
+        type: string
+      validationCode:
+        type: string
+    type: object
+  dto.ResValidationCodeMasterTagDto:
+    properties:
+      createdAt:
+        type: string
+      createdBy:
+        type: string
+      id:
+        type: integer
+      masterTagCode:
+        type: string
+      masterTagId:
+        type: integer
+      updatedAt:
+        type: string
+      updatedBy:
+        type: string
+      validationCode:
+        type: string
+      validationCodeId:
+        type: integer
+    type: object
+  minio.UploadRequest:
+    properties:
+      bucketName:
+        type: string
+      contentType:
+        type: string
+      data:
+        type: string
+      nameFile:
+        type: string
+    type: object
+  models.Response:
+    properties:
+      contents: {}
+      data: {}
+      errCode:
+        type: string
+      errDesc:
+        type: string
+      totalData:
+        type: integer
+    type: object
+info:
+  contact: {}
+paths:
+  /rosego/v.0.1/UploadImage:
+    post:
+      consumes:
+      - application/json
+      description: Upload Image
+      operationId: Upload Image
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/minio.UploadRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: UploadImage
+  /rosego/v.0.1/acquititions:
+    post:
+      consumes:
+      - application/json
+      description: Acquititons Save
+      operationId: Acquititons - Save
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ReqAcquititionsDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                contents:
+                  items:
+                    $ref: '#/definitions/dto.ResAcquititionsDto'
+                  type: array
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Acquititons - Save
+  /rosego/v.0.1/acquititions/delete/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Acquititons Delete
+      operationId: Acquititons - Delete
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: ID of the order to be deleted
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Acquititons - Delete
+  /rosego/v.0.1/acquititions/filter:
+    post:
+      consumes:
+      - application/json
+      description: Acquititons Filter
+      operationId: Acquititons - Filter
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ReqFilterAcquititionsDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                contents:
+                  items:
+                    $ref: '#/definitions/dto.ReqAcquititionsDto'
+                  type: array
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Acquititons - Filter
+  /rosego/v.0.1/akuisisi-sfa-failed/filter:
+    post:
+      consumes:
+      - application/json
+      description: Akuisisi SFA Failed Filter
+      operationId: Akuisisi SFA Failed - Filter
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ReqAkuisisiSfaFailed'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                contents:
+                  items:
+                    $ref: '#/definitions/dbmodels.AkuisisiSfaFailed'
+                  type: array
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Akuisisi SFA Failed- Filter
+  /rosego/v.0.1/akuisisi-sfa/filter:
+    post:
+      consumes:
+      - application/json
+      description: Akuisisi SFA Filter
+      operationId: Akuisisi SFA - Filter
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ReqAkuisisiSfa'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                contents:
+                  items:
+                    $ref: '#/definitions/dbmodels.AkuisisiSfa'
+                  type: array
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Akuisisi SFA - Filter
+  /rosego/v.0.1/bank-list:
+    post:
+      consumes:
+      - application/json
+      description: SettlementConfigController Save/EDit
+      operationId: SettlementConfigController - Save/Edit
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ReqSettlementConfigDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: SettlementConfigController - Save / Edit
+  /rosego/v.0.1/bank-list/filter:
+    post:
+      consumes:
+      - application/json
+      description: Settlement Config Filter Paging
+      operationId: SettlementConfig - Filter
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ReqSettlementConfigDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                contents:
+                  items:
+                    $ref: '#/definitions/dbmodels.SettlementConfig'
+                  type: array
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: SettlementConfig - Filter
+  /rosego/v.0.1/blast-notif/send-all:
+    post:
+      consumes:
+      - application/json
+      description: BlastNotif Send All
+      operationId: BlastNotifSendAll
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ReqBlastNotificationSendAllDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: BlastNotif Send All
+  /rosego/v.0.1/config-va-merchant-group/find-by-group-id-from-redis/{id}:
+    get:
+      consumes:
+      - application/json
+      description: Config VA Merchant Group - FindByGroupIdFromRedis
+      operationId: Config VA Merchant Group - FindByGroupIdFromRedis
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: merchant group id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Config VA Merchant Group - FindByGroupIdFromRedis
+  /rosego/v.0.1/config-va-merchant-group/find-by-group-id/{id}:
+    get:
+      consumes:
+      - application/json
+      description: Config VA Merchant Group - FindByGroupId
+      operationId: Config VA Merchant Group - FindByGroupId
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: merchant group id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Config VA Merchant Group - FindByGroupId
+  /rosego/v.0.1/config-va-merchant-group/save:
+    post:
+      consumes:
+      - application/json
+      description: Config VA Merchant Group - Save
+      operationId: Config VA Merchant Group - Save
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/dbmodels.ConfigVaMerchantGroup'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Config VA Merchant Group - Save
+  /rosego/v.0.1/config-va-merchant-group/save-to-redis:
+    post:
+      consumes:
+      - application/json
+      description: Config VA Merchant Group - SaveToRedis
+      operationId: Config VA Merchant Group - SaveToRedis
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/dbmodels.ConfigVaMerchantGroup'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Config VA Merchant Group - SaveToRedis
+  /rosego/v.0.1/feature-product:
+    post:
+      consumes:
+      - application/json
+      description: Feature Product Save/EDit
+      operationId: Feature Product - Save/Edit
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ReqFiturProductDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Feature Product - Save / Edit
+  /rosego/v.0.1/feature-product/filter:
+    post:
+      consumes:
+      - application/json
+      description: Feature Product Filter
+      operationId: Feature Product - Filter
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ReqFiturProductDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                contents:
+                  items:
+                    $ref: '#/definitions/dto.ReqFiturProductDto'
+                  type: array
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Feature Product - Filter
+  /rosego/v.0.1/instruction-list:
+    post:
+      consumes:
+      - application/json
+      description: Instruction List Save
+      operationId: Instruction List - Save
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ReqInstructionListDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Instruction List - Save
+  /rosego/v.0.1/instruction-list/delete/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete Instruction List
+      operationId: Instruction List - Delete
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: ID of the order to be deleted
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Instruction List - Delete
+  /rosego/v.0.1/instruction-list/filter:
+    post:
+      consumes:
+      - application/json
+      description: Instruction List Filter
+      operationId: Instruction List - Filter
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ReqInstructionListDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                contents:
+                  items:
+                    $ref: '#/definitions/dto.ResInstructionListDto'
+                  type: array
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Instruction List - Filter
+  /rosego/v.0.1/limit-transaction:
+    post:
+      consumes:
+      - application/json
+      description: Limit Transaction Save/EDit
+      operationId: Limit Transaction - Save/Edit
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ReqLimitTransactionDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Limit Transaction - Save / Edit
+  /rosego/v.0.1/limit-transaction/filter:
+    post:
+      consumes:
+      - application/json
+      description: Limit Transaction Filter
+      operationId: Limit Transaction - Filter
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ReqLimitTransactionDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                contents:
+                  items:
+                    $ref: '#/definitions/dbmodels.LimitTransaction'
+                  type: array
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Limit Transaction - Filter
+  /rosego/v.0.1/lmonitoring-activation-fds/filter:
+    post:
+      consumes:
+      - application/json
+      description: Monitoring Activation FDS Filter
+      operationId: Monitoring Activation FDS - Filter
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ReqMonitoringActivationFDSDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                contents:
+                  items:
+                    $ref: '#/definitions/dbmodels.LimitTransaction'
+                  type: array
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Monitoring Activation FDS - Filter
+  /rosego/v.0.1/loan-product-maintenance:
+    post:
+      consumes:
+      - application/json
+      description: LoanProductMaintenance Save/EDit
+      operationId: LoanProductMaintenanceSaveEdit
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ReqSaveLoanProductMaintenanceDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: LoanProductMaintenance - Save / Edit
+  /rosego/v.0.1/loan-product-maintenance/filter:
+    post:
+      consumes:
+      - application/json
+      description: LoanProductMaintenance Filter Paging
+      operationId: LoanProductMaintenanceFilter
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ReqLoanProductMaintenanceDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                contents:
+                  items:
+                    $ref: '#/definitions/dto.ResValidationCodeMasterTagDto'
+                  type: array
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: LoanProductMaintenance - Filter
+  /rosego/v.0.1/lookup:
+    post:
+      consumes:
+      - application/json
+      description: Lookup Save/EDit
+      operationId: LookupSave/Edit
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ReqLookupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Lookup - Save / Edit
+  /rosego/v.0.1/lookup-group:
+    post:
+      consumes:
+      - application/json
+      description: LookupGroup Save/EDit
+      operationId: LookupGroupSave/Edit
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ReqLookupGroupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: LookupGroup - Save / Edit
+  /rosego/v.0.1/lookup-group/all:
+    get:
+      consumes:
+      - application/json
+      description: LookupGroup All
+      operationId: LookupGroupAll
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                contents:
+                  items:
+                    $ref: '#/definitions/dbmodels.LookupGroup'
+                  type: array
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: LookupGroup - All
+  /rosego/v.0.1/lookup-group/filter:
+    post:
+      consumes:
+      - application/json
+      description: LookupGroup Filter Paging
+      operationId: LookupGroupFilter
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ReqLookupGroupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                contents:
+                  items:
+                    $ref: '#/definitions/dbmodels.LookupGroup'
+                  type: array
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: LookupGroup - Filter
+  /rosego/v.0.1/lookup/filter:
+    post:
+      consumes:
+      - application/json
+      description: Lookup Filter Paging
+      operationId: LookupFilter
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ReqLookupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                contents:
+                  items:
+                    $ref: '#/definitions/dbmodels.Lookup'
+                  type: array
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Lookup - Filter
+  /rosego/v.0.1/master-tag:
+    post:
+      consumes:
+      - application/json
+      description: MasterTag Save/EDit
+      operationId: MasterTag - Save/Edit
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ReqMasterTagDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: MasterTag - Save / Edit
+  /rosego/v.0.1/master-tag/all:
+    get:
+      consumes:
+      - application/json
+      description: MasterTag AllData
+      operationId: MasterTagAllData
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                contents:
+                  items:
+                    $ref: '#/definitions/dbmodels.MasterTag'
+                  type: array
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: MasterTag - All
+  /rosego/v.0.1/master-tag/filter:
+    post:
+      consumes:
+      - application/json
+      description: MasterTag Filter Paging
+      operationId: MasterTagFilter
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ReqMasterTagDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                contents:
+                  items:
+                    $ref: '#/definitions/dbmodels.MasterTag'
+                  type: array
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: MasterTag - Filter
+  /rosego/v.0.1/merchant-bank-account:
+    post:
+      consumes:
+      - application/json
+      description: MerchantBankAccount Save/EDit
+      operationId: MerchantBankAccount - Save/Edit
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ReqMerchantBankAccountDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: MerchantBankAccount - Save / Edit
+  /rosego/v.0.1/merchant-bank-account/approval:
+    post:
+      consumes:
+      - application/json
+      description: MerchantBankAccount filter approval
+      operationId: MerchantBankAccount - filter approval
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ReqMerchantBankAccountDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                contents:
+                  items:
+                    $ref: '#/definitions/dbmodels.MerchantBankAccount'
+                  type: array
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: MerchantBankAccount - Get Data pending MerchantBankAccount
+  /rosego/v.0.1/merchant-bank-account/approval/approve:
+    post:
+      consumes:
+      - application/json
+      description: MerchantBankAccount Approve
+      operationId: MerchantBankAccount - Approve
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ReqApprovalMerchantBankAccountDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: MerchantBankAccount - Approve
+  /rosego/v.0.1/merchant-bank-account/approval/reject:
+    post:
+      consumes:
+      - application/json
+      description: MerchantBankAccount Reject
+      operationId: MerchantBankAccount - Reject
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ReqApprovalMerchantBankAccountDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: MerchantBankAccount - Reject
+  /rosego/v.0.1/merchant-bank-account/mid/{mid}:
+    get:
+      consumes:
+      - application/json
+      description: Get MerchantBankAccount by mid
+      operationId: MerchantBankAccount - FindAllByMid
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: mid
+        in: path
+        name: mid
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                contents:
+                  items:
+                    $ref: '#/definitions/dbmodels.MerchantBankAccount'
+                  type: array
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      security:
+      - ApiKeyAuth: []
+      summary: MerchantBankAccount - get by mid
+  /rosego/v.0.1/merchant-bank-loan/filter:
+    post:
+      consumes:
+      - application/json
+      description: MerchantBankLoan Filter Paging
+      operationId: MerchantBankLoanFilter
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ReqMerchantBankLoanDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                contents:
+                  items:
+                    $ref: '#/definitions/dbmodels.MerchantBankLoan'
+                  type: array
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: MerchantBankLoan - Filter
+  /rosego/v.0.1/merchant-bank-loan/find-sub:
+    post:
+      consumes:
+      - application/json
+      description: MerchantBankLoan FindSubMerchantBankLoan
+      operationId: MerchantBankLoanFindSubMerchantBankLoan
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ReqSubMerchantBankloanDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                contents:
+                  items:
+                    $ref: '#/definitions/dbmodels.SubMerchantBankLoan'
+                  type: array
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: MerchantBankLoan - FindSubMerchantBankLoan
+  /rosego/v.0.1/merchant-master-tag/download-all:
+    get:
+      consumes:
+      - application/json
+      description: MerchantMasterTag DownloadAll
+      operationId: MerchantMasterTagDownloadAll
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: MerchantMasterTag - Download ALl
+  /rosego/v.0.1/merchant-master-tag/filter:
+    post:
+      consumes:
+      - application/json
+      description: MerchantMasterTag Filter Paging
+      operationId: MerchantMasterTagFilter
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ReqMerchantMasterTagDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                contents:
+                  items:
+                    $ref: '#/definitions/dbmodels.MerchantMasterTag'
+                  type: array
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: MerchantMasterTag - Filter
+  /rosego/v.0.1/partner-Link:
+    post:
+      consumes:
+      - application/json
+      description: PartnerLinkController Save/EDit
+      operationId: PartnerLinkController - Save/Edit
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ReqPartnerLinkDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: PartnerLinkController - Save / Edit
+  /rosego/v.0.1/partner-link/delete/:
+    post:
+      consumes:
+      - application/json
+      description: PartnerLinkController Delete
+      operationId: PartnerLinkController - Delete
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ReqPartnerLinkDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: PartnerLinkController - Delete
+  /rosego/v.0.1/partner-link/filter:
+    post:
+      consumes:
+      - application/json
+      description: PartnerLink Filter Paging
+      operationId: PartnerLink - Filter
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ReqPartnerLinkDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                contents:
+                  items:
+                    $ref: '#/definitions/dbmodels.PartnerLink'
+                  type: array
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: PartnerLink - Filter
+  /rosego/v.0.1/updated-data/approve:
+    post:
+      consumes:
+      - application/json
+      description: UpdatedDataMerchant Approve
+      operationId: UpdatedDataMerchantApprove
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ReqUpdateDataMerchantDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: UpdatedDataMerchant - Approve
+  /rosego/v.0.1/updated-data/filter:
+    post:
+      consumes:
+      - application/json
+      description: UpdatedDataMerchant - Filter
+      operationId: UpdatedDataMerchantFilter
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ReqUpdatedDataMerchantDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                contents:
+                  items:
+                    $ref: '#/definitions/dbmodels.UpdatedDataMerchant'
+                  type: array
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: UpdatedDataMerchant - Filter
+  /rosego/v.0.1/updated-data/reject:
+    post:
+      consumes:
+      - application/json
+      description: UpdatedDataMerchant Reject
+      operationId: UpdatedDataMerchantReject
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ReqUpdateDataMerchantDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: UpdatedDataMerchant - Reject
+  /rosego/v.0.1/upgrade-fds:
+    post:
+      consumes:
+      - application/json
+      description: Upgrade FDS Save/EDit
+      operationId: Upgrade FDS - Save/Edit
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/dbmodels.LogUpgradeFds'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Upgrade FDS - Save / Edit
+  /rosego/v.0.1/upgrade-fds/filter:
+    post:
+      consumes:
+      - application/json
+      description: Upgrade FDS Filter Paging
+      operationId: Upgrade FDS - Filter
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ReqLogUpgradeFdsDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                contents:
+                  items:
+                    items:
+                      $ref: '#/definitions/dbmodels.LogUpgradeFds'
+                    type: array
+                  type: array
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Upgrade FDS - Filter
+  /rosego/v.0.1/validation-code:
+    post:
+      consumes:
+      - application/json
+      description: ValidationCode Save/EDit
+      operationId: ValidationCode - Save/Edit
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ReqValidationCodeDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: ValidationCode - Save / Edit
+  /rosego/v.0.1/validation-code-master-tag:
+    post:
+      consumes:
+      - application/json
+      description: ValidationCodeMasterTag Save/EDit
+      operationId: ValidationCodeMasterTagSaveEdit
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ReqSaveValidationCodeMasterTagDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: ValidationCodeMasterTag - Save / Edit
+  /rosego/v.0.1/validation-code-master-tag/filter:
+    post:
+      consumes:
+      - application/json
+      description: ValidationCodeMasterTag Filter Paging
+      operationId: ValidationCodeMasterTagFilter
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ReqValidationCodeMasterTagDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                contents:
+                  items:
+                    $ref: '#/definitions/dto.ResValidationCodeMasterTagDto'
+                  type: array
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: ValidationCodeMasterTag - Filter
+  /rosego/v.0.1/validation-code/filter:
+    post:
+      consumes:
+      - application/json
+      description: ValidationCode Filter Paging
+      operationId: ValidationCode - Filter
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ReqValidationCodeDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                contents:
+                  items:
+                    $ref: '#/definitions/dto.ResValidationCodeDto'
+                  type: array
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: ValidationCode - Filter
+swagger: "2.0"
